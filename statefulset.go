@@ -79,6 +79,173 @@ func DebugStatefulsetApplyConfiguration(ctx context.Context, oldStatefulsetApply
 
 			if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes) {
 				logger.Info("statefulset spec.template.spec.volumes are not equal")
+
+				if len(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes) != len(newStatefulsetApplyConfig.Spec.Template.Spec.Volumes) {
+					logger.Info("statefulset spec.template.spec.volumes length are not equal")
+				} else {
+					for i := range len(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes) {
+						if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i], newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i]) {
+							logger.Info("statefulset spec.template.spec.volumes are not equal")
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].Name, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].Name) {
+								logger.Info("statefulset spec.template.spec.volumes.name are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].Name, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].Name) {
+								logger.Info("statefulset spec.template.spec.volumes.name are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].HostPath, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].HostPath) {
+								logger.Info("statefulset spec.template.spec.volumes.hostpath are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].EmptyDir, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].EmptyDir) {
+								logger.Info("statefulset spec.template.spec.volumes.emptydir are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].GCEPersistentDisk, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].GCEPersistentDisk) {
+								logger.Info("statefulset spec.template.spec.volumes.gcepersistentdisk are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].AWSElasticBlockStore, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].AWSElasticBlockStore) {
+								logger.Info("statefulset spec.template.spec.volumes.awselasticblockstore are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].GitRepo, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].GitRepo) {
+								logger.Info("statefulset spec.template.spec.volumes.gitrepo are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].Secret, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].Secret) {
+								logger.Info("statefulset spec.template.spec.volumes.secret are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].NFS, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].NFS) {
+								logger.Info("statefulset spec.template.spec.volumes.nfs are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].ISCSI, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].ISCSI) {
+								logger.Info("statefulset spec.template.spec.volumes.iscsi are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].Glusterfs, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].Glusterfs) {
+								logger.Info("statefulset spec.template.spec.volumes.glusterfs are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].PersistentVolumeClaim, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].PersistentVolumeClaim) {
+								logger.Info("statefulset spec.template.spec.volumes.persistentvolumeclaim are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].RBD, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].RBD) {
+								logger.Info("statefulset spec.template.spec.volumes.rbd are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].FlexVolume, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].FlexVolume) {
+								logger.Info("statefulset spec.template.spec.volumes.flexvolume are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].Cinder, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].Cinder) {
+								logger.Info("statefulset spec.template.spec.volumes.cinder are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].CephFS, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].CephFS) {
+								logger.Info("statefulset spec.template.spec.volumes.cephfs are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].Flocker, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].Flocker) {
+								logger.Info("statefulset spec.template.spec.volumes.flocker are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].DownwardAPI, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].DownwardAPI) {
+								logger.Info("statefulset spec.template.spec.volumes.downwardapi are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].FC, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].FC) {
+								logger.Info("statefulset spec.template.spec.volumes.fc are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].AzureFile, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].AzureFile) {
+								logger.Info("statefulset spec.template.spec.volumes.azurefile are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].ConfigMap, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].ConfigMap) {
+								logger.Info("statefulset spec.template.spec.volumes.configmap are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].VsphereVolume, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].VsphereVolume) {
+								logger.Info("statefulset spec.template.spec.volumes.vspherevolume are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].Quobyte, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].Quobyte) {
+								logger.Info("statefulset spec.template.spec.volumes.quobyte are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].AzureDisk, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].AzureDisk) {
+								logger.Info("statefulset spec.template.spec.volumes.azuredisk are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].PhotonPersistentDisk, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].PhotonPersistentDisk) {
+								logger.Info("statefulset spec.template.spec.volumes.photonpersistentdisk are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].Projected, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].Projected) {
+								logger.Info("statefulset spec.template.spec.volumes.projected are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].PortworxVolume, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].PortworxVolume) {
+								logger.Info("statefulset spec.template.spec.volumes.portworxvolume are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].ScaleIO, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].ScaleIO) {
+								logger.Info("statefulset spec.template.spec.volumes.scaleio are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].StorageOS, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].StorageOS) {
+								logger.Info("statefulset spec.template.spec.volumes.storageos are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].CSI, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].CSI) {
+								logger.Info("statefulset spec.template.spec.volumes.csi are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].Ephemeral, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].Ephemeral) {
+								logger.Info("statefulset spec.template.spec.volumes.ephemeral are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].Image, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].Image) {
+								logger.Info("statefulset spec.template.spec.volumes.image are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].Projected, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].Projected) {
+								logger.Info("statefulset spec.template.spec.volumes.projected are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].PortworxVolume, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].PortworxVolume) {
+								logger.Info("statefulset spec.template.spec.volumes.portworxvolume are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].ScaleIO, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].ScaleIO) {
+								logger.Info("statefulset spec.template.spec.volumes.scaleio are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].StorageOS, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].StorageOS) {
+								logger.Info("statefulset spec.template.spec.volumes.storageos are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].CSI, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].CSI) {
+								logger.Info("statefulset spec.template.spec.volumes.csi are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].Ephemeral, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].Ephemeral) {
+								logger.Info("statefulset spec.template.spec.volumes.ephemeral are not equal")
+							}
+
+							if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].Image, newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i].Image) {
+								logger.Info("statefulset spec.template.spec.volumes.image are not equal")
+							}
+						}
+					}
+				}
+
 			}
 
 			if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.InitContainers, newStatefulsetApplyConfig.Spec.Template.Spec.InitContainers) {
