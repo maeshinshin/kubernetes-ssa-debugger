@@ -238,41 +238,42 @@ func DebugStatefulsetApplyConfiguration(ctx context.Context, oldStatefulsetApply
 	}
 
 	if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.VolumeClaimTemplates, newStatefulsetApplyConfig.Spec.VolumeClaimTemplates) {
-		logger.Info("statefulset volume claim spec.templates are not equal")
+		logger.Info("statefulset spec.volumeclametemplates are not equal")
 	}
 
 	if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.ServiceName, newStatefulsetApplyConfig.Spec.ServiceName) {
-		logger.Info("statefulset service name are not equal")
+		logger.Info("statefulset spec.servicename are not equal")
 	}
 
 	if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.PodManagementPolicy, newStatefulsetApplyConfig.Spec.PodManagementPolicy) {
-		logger.Info("statefulset pod management policy are not equal")
+		logger.Info("statefulset spec.podmanagementpolicy are not equal")
 	}
 
 	if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.UpdateStrategy, newStatefulsetApplyConfig.Spec.UpdateStrategy) {
-		logger.Info("statefulset update strategy are not equal")
+		logger.Info("statefulset spec.updatestrategy are not equal")
 	}
 
 	if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.RevisionHistoryLimit, newStatefulsetApplyConfig.Spec.RevisionHistoryLimit) {
-		logger.Info("statefulset revision history limit are not equal")
+		logger.Info("statefulset spec.revisionhistorylimit are not equal")
 	}
 
 	if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.MinReadySeconds, newStatefulsetApplyConfig.Spec.MinReadySeconds) {
-		logger.Info("statefulset min ready seconds are not equal")
+		logger.Info("statefulset spec.minreadyseconds are not equal")
 	}
+
 	if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Finalizers, newStatefulsetApplyConfig.Spec.Template.Finalizers) {
 		logger.Info("statefulset spec.template.finalizers are not equal")
 	}
 
 	if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.MinReadySeconds, newStatefulsetApplyConfig.Spec.MinReadySeconds) {
-		logger.Info("statefulset min ready seconds are not equal")
+		logger.Info("statefulset spec.minreadyseconds are not equal")
 	}
 
 	if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.PersistentVolumeClaimRetentionPolicy, newStatefulsetApplyConfig.Spec.PersistentVolumeClaimRetentionPolicy) {
-		logger.Info("statefulset persistent volume claim retention policy are not equal")
+		logger.Info("statefulset spec.persistentvolumeclaimretentionpolicy are not equal")
 	}
 
 	if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Ordinals, newStatefulsetApplyConfig.Spec.Ordinals) {
-		logger.Info("statefulset volume claim spec.templates are not equal")
+		logger.Info("statefulset spec.ordinals are not equal")
 	}
 }

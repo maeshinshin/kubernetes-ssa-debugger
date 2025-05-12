@@ -1,4 +1,4 @@
-module github.com/maeshinshin/debugger-kubernetes-ssa
+module github.com/maeshinshin/kubernetes-ssa-debugger
 
 go 1.24.2
 
