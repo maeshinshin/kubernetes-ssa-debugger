@@ -20,7 +20,7 @@ func DebugStatefulsetApplyConfiguration(ctx context.Context, oldStatefulsetApply
 	}
 
 	if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template, newStatefulsetApplyConfig.Spec.Template) {
-		logger.Info("statefulset spec.template.are not equal")
+		logger.Info("statefulset spec.template are not equal")
 
 		if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Name, newStatefulsetApplyConfig.Spec.Template.Name) {
 			logger.Info("statefulset spec.template.name are not equal")
@@ -83,7 +83,7 @@ func DebugStatefulsetApplyConfiguration(ctx context.Context, oldStatefulsetApply
 				if len(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes) != len(newStatefulsetApplyConfig.Spec.Template.Spec.Volumes) {
 					logger.Info("statefulset spec.template.spec.volumes length are not equal")
 				} else {
-					for i := range len(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes) {
+					for i := range max(len(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes), len(newStatefulsetApplyConfig.Spec.Template.Spec.Volumes)) {
 						if !equality.Semantic.DeepEqual(oldStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i], newStatefulsetApplyConfig.Spec.Template.Spec.Volumes[i]) {
 							logger.Info("statefulset spec.template.spec.volumes are not equal")
 
